@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./cinema-photo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #292920;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+}
+
+.seat {
+  background-color: #444451;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 3px;
+  border-radius: 15px;
+}
+
+.seat.selected {
+  background-color: #f6eb6f;
+}
+.seat.reserved {
+  background-color: rgb(154, 15, 15);
+}
+.seat:not(.reserved):hover {
+  cursor: grab;
+  transform: scale(1.1);
+}
+.seat:nth-of-type(2) {
+  /*?ikinci elemanda itibaren ayirdim*/
+  margin-right: 20px;
+}
+.seat:nth-last-of-type(3) {
+  margin-right: 20px;
+}
+
+.row {
+  display: flex;
+}
+
+.screen {
+  background-color: #fff;
+  height: 100px;
+  width: 100%;
+  margin: 20px 0;
+  box-shadow: rgba(121, 185, 42, 0.4) 5px 5px, rgba(13, 110, 13, 0.3) 10px 10px,
+    rgba(229, 240, 18, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.movie-list {
+  margin: 20px 0;
+}
+
+#movie {
+  width: 10rem;
+  height: 2rem;
+}
+
+.info {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 5px 10px;
+  color: #777;
+  display: flex;
+}
+
+.info li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+p.text span {
+  color: #d0c334;
+}
+.text {
+  margin-top: 2rem;
+}
